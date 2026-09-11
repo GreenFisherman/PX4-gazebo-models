@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <!-- FLU: +X forward, +Y port, +Z up. Dimensions in metres.
+       Requires world-level graded buoyancy at z=0; see README.md.
+       Prototype mass/drag values, not a calibrated vessel. -->
+  <model name="fish_usv">
+    <static>false</static>
+    <self_collide>false</self_collide>
+    <link name="base_link">
+      <!-- 12 kg hull/payload; thrusters add 0.4 kg.
+           Two 1.2 x 0.18 m waterplanes give ~0.029 m freshwater draft.
+           At rest base_link is approximately z=0.131 m. -->
+      <inertial>
+        <pose>0 0 -0.04 0 0 0</pose>
+        <mass>12</mass>
+        <inertia>
+          <ixx>0.9</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>1.5</iyy><iyz>0</iyz><izz>2.2</izz>
+        </inertia>
+      </inertial>
+      <!-- Separate longitudinal buoyancy cells preserve pitch restoring
+           forces on Harmonic 8.15, whose graded buoyancy slices each box
+           without rotating the water plane into the collision frame. -->
+      <collision name="port_hull_collision_0">
+        <pose>-0.525 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="port_hull_collision_1">
+        <pose>-0.375 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="port_hull_collision_2">
+        <pose>-0.225 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="port_hull_collision_3">
+        <pose>-0.075 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="port_hull_collision_4">
+        <pose>0.075 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="port_hull_collision_5">
+        <pose>0.225 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="port_hull_collision_6">
+        <pose>0.375 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="port_hull_collision_7">
+        <pose>0.525 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <visual name="port_hull_visual">
+        <pose>0 0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>1.2 0.18 0.24</size></box></geometry>
+        <material><ambient>0.9 0.35 0.03 1</ambient><diffuse>0.9 0.35 0.03 1</diffuse></material>
+      </visual>
+      <!-- Separate longitudinal buoyancy cells preserve pitch restoring
+           forces on Harmonic 8.15, whose graded buoyancy slices each box
+           without rotating the water plane into the collision frame. -->
+      <collision name="starboard_hull_collision_0">
+        <pose>-0.525 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="starboard_hull_collision_1">
+        <pose>-0.375 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="starboard_hull_collision_2">
+        <pose>-0.225 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="starboard_hull_collision_3">
+        <pose>-0.075 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="starboard_hull_collision_4">
+        <pose>0.075 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="starboard_hull_collision_5">
+        <pose>0.225 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="starboard_hull_collision_6">
+        <pose>0.375 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <collision name="starboard_hull_collision_7">
+        <pose>0.525 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>0.15 0.18 0.24</size></box></geometry>
+      </collision>
+      <visual name="starboard_hull_visual">
+        <pose>0 -0.32 -0.04 0 0 0</pose>
+        <geometry><box><size>1.2 0.18 0.24</size></box></geometry>
+        <material><ambient>0.9 0.35 0.03 1</ambient><diffuse>0.9 0.35 0.03 1</diffuse></material>
+      </visual>
+      <collision name="deck_collision">
+        <pose>0 0 0.11 0 0 0</pose>
+        <geometry><box><size>0.8 0.7 0.06</size></box></geometry>
+      </collision>
+      <visual name="deck_visual">
+        <pose>0 0 0.11 0 0 0</pose>
+        <geometry><box><size>0.8 0.7 0.06</size></box></geometry>
+        <material><ambient>0.15 0.18 0.2 1</ambient><diffuse>0.15 0.18 0.2 1</diffuse></material>
+      </visual>
+      <visual name="electronics_enclosure">
+        <pose>-0.1 0 0.22 0 0 0</pose>
+        <geometry><box><size>0.3 0.25 0.16</size></box></geometry>
+        <material><ambient>0.85 0.85 0.85 1</ambient><diffuse>0.85 0.85 0.85 1</diffuse></material>
+      </visual>
+      <visual name="camera_mount">
+        <pose>0.25 0 -0.08 0 0 0</pose>
+        <geometry><cylinder><radius>0.015</radius><length>0.38</length></cylinder></geometry>
+      </visual>
+      <visual name="camera_housing">
+        <pose>0.25 0 -0.27 0 0 0</pose>
+        <geometry><box><size>0.08 0.08 0.06</size></box></geometry>
+        <material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.08 0.08 0.08 1</diffuse></material>
+      </visual>
+      <!-- Camera +X optical axis is rotated toward -Z.
+           Lens is below its housing and between the hulls. Default scoped
+           Gazebo topics allow multiple instances without image collisions. -->
+      <sensor name="fish_camera" type="camera">
+        <pose>0.25 0 -0.305 0 1.57079632679 0</pose>
+        <always_on>true</always_on>
+        <update_rate>20</update_rate>
+        <camera>
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image><width>1280</width><height>720</height><format>R8G8B8</format></image>
+          <clip><near>0.03</near><far>20</far></clip>
+        </camera>
+      </sensor>
+      <!--Sensors-->
+      <sensor name="air_pressure_sensor" type="air_pressure">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>50</update_rate>
+        <air_pressure>
+          <!-- Noise modeled after BMP390 -->
+          <pressure>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>3</stddev>
+            </noise>
+          </pressure>
+        </air_pressure>
+      </sensor>
+      <sensor name="magnetometer_sensor" type="magnetometer">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <magnetometer>
+          <!-- TODO: update to fix units and coordinate system when we move past Harmonic -->
+          <!-- See https://github.com/gazebosim/gz-sim/pull/2460 -->
+          <!-- 3mgauss RMS: NOTE: noise is in tesla but sensor reports data in gauss -->
+          <!-- Noise modeled after IIS2MDC -->
+          <x>
+            <noise type="gaussian">
+              <stddev>0.0001</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <stddev>0.0001</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <stddev>0.0001</stddev>
+            </noise>
+          </z>
+        </magnetometer>
+      </sensor>
+      <sensor name="imu_sensor" type="imu">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>250</update_rate>
+        <imu>
+          <angular_velocity>
+            <!-- Noise modeled after IIM42653 -->
+            <!-- 0.05 deg/s converted to rad/s -->
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <!-- Noise modeled after IIM42653 -->
+            <!-- X & Y axis: 0.65 mg-rms converted to m/ss -->
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00637</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00637</stddev>
+              </noise>
+            </y>
+            <!-- Z axis: 0.70 mg-rms converted to m/ss-->
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00686</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
+      <sensor name="navsat_sensor" type="navsat">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+      </sensor>
+    </link>
+
+    <link name="port_propeller_link">
+      <!-- The GenericMotorModel applies thrust along this link's local +Z.
+           Pitching it +90 degrees makes +Z point forward (+X). -->
+      <pose relative_to="base_link">-0.64 0.32 -0.19 0 1.57079632679 0</pose>
+      <inertial>
+        <mass>0.2</mass>
+        <inertia>
+          <ixx>0.00025</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.00014</iyy><iyz>0</iyz><izz>0.00014</izz>
+        </inertia>
+      </inertial>
+      <visual name="propeller_visual">
+        <geometry><box><size>0.02 0.1 0.015</size></box></geometry>
+        <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+      </visual>
+    </link>
+    <joint name="port_propeller_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>port_propeller_link</child>
+      <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+    <!-- PX4 sends an Actuators message on command/motor_speed. The model
+         instance name scopes this to /fish_usv_0/command/motor_speed. -->
+    <plugin filename="libGenericMotorModelPlugin.so" name="gz::sim::systems::GenericMotorModel">
+      <jointName>port_propeller_joint</jointName>
+      <linkName>port_propeller_link</linkName>
+      <actuator_number>1</actuator_number>
+      <turningDirection>ccw</turningDirection>
+      <timeConstantUp>0.05</timeConstantUp>
+      <timeConstantDown>0.10</timeConstantDown>
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <rotorVelocitySlowdownSim>0.025</rotorVelocitySlowdownSim>
+      <motorType>force_polynomial</motorType>
+      <controlMethod>duty_cycle</controlMethod>
+      <minCommand>0.02</minCommand>
+      <minDutyCycle>1000</minDutyCycle>
+      <maxDutyCycle>2000</maxDutyCycle>
+      <bidirectionalMotor>1</bidirectionalMotor>
+      <positiveThrustPolynomial>[0.0, 12.0, 0.0, 0.0]</positiveThrustPolynomial>
+      <negativeThrustPolynomial>[0.0, 9.0, 0.0, 0.0]</negativeThrustPolynomial>
+    </plugin>
+
+    <link name="starboard_propeller_link">
+      <pose relative_to="base_link">-0.64 -0.32 -0.19 0 1.57079632679 0</pose>
+      <inertial>
+        <mass>0.2</mass>
+        <inertia>
+          <ixx>0.00025</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.00014</iyy><iyz>0</iyz><izz>0.00014</izz>
+        </inertia>
+      </inertial>
+      <visual name="propeller_visual">
+        <geometry><box><size>0.02 0.1 0.015</size></box></geometry>
+        <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+      </visual>
+    </link>
+    <joint name="starboard_propeller_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>starboard_propeller_link</child>
+      <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+    <plugin filename="libGenericMotorModelPlugin.so" name="gz::sim::systems::GenericMotorModel">
+      <jointName>starboard_propeller_joint</jointName>
+      <linkName>starboard_propeller_link</linkName>
+      <actuator_number>0</actuator_number>
+      <turningDirection>cw</turningDirection>
+      <timeConstantUp>0.05</timeConstantUp>
+      <timeConstantDown>0.10</timeConstantDown>
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <rotorVelocitySlowdownSim>0.025</rotorVelocitySlowdownSim>
+      <motorType>force_polynomial</motorType>
+      <controlMethod>duty_cycle</controlMethod>
+      <minCommand>0.02</minCommand>
+      <minDutyCycle>1000</minDutyCycle>
+      <maxDutyCycle>2000</maxDutyCycle>
+      <bidirectionalMotor>1</bidirectionalMotor>
+      <positiveThrustPolynomial>[0.0, 12.0, 0.0, 0.0]</positiveThrustPolynomial>
+      <negativeThrustPolynomial>[0.0, 9.0, 0.0, 0.0]</negativeThrustPolynomial>
+    </plugin>
+
+    <!-- Fossen damping coefficients: negative values oppose motion.
+         Drag is always active; this model assumes operation on water.
+         Added mass is omitted for this initial perception prototype. -->
+    <plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
+      <link_name>base_link</link_name>
+      <xU>-8</xU><yV>-25</yV><zW>-40</zW>
+      <kP>-3</kP><mQ>-6</mQ><nR>-5</nR>
+      <xUabsU>-12</xUabsU><yVabsV>-40</yVabsV><zWabsW>-60</zWabsW>
+      <kPabsP>-2</kPabsP><mQabsQ>-5</mQabsQ><nRabsR>-8</nRabsR>
+    </plugin>
+  </model>
+</sdf>
