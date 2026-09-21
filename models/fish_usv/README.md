@@ -16,14 +16,71 @@ starts the PX4-Gazebo sensor/actuator bridge. Start QGroundControl separately
 with `qgc`; it normally connects to PX4 automatically.
 
 Both worlds default to latitude **51.971659**, longitude **5.384925**.
+Home/start is afloat beside the eastern (right-hand) beach, about 35 m from
+the water's edge, facing west into the lake. The terrain and fence are both
+registered to this position; the old lake-centre GPS assumption is no longer used.
 Water-surface elevation remains an assumed 0 m, not a surveyed local elevation.
 Close PX4 and Gazebo before relaunching to load a changed world origin.
 Explicit `PX4_HOME_LAT`, `PX4_HOME_LON` and `PX4_HOME_ALT` environment variables
 override the world coordinates; unset all three to use this default.
 The GPS origin places the boat on QGC's map but does not load real terrain.
 
-The world provides calm freshwater with its surface at world Z=0 and a seabed
-at Z=-5 m. It spawns the boat at Z=0.131 m. Hull mass, inertia, thrust and drag
+The world includes a Gravenbol lake approximation traced and scaled from
+`docs/gravenbol_boundary_off.png`, with sloping solid banks, grass, beaches, shoreline trees
+and a patterned lakebed. See `../gravenbol/README.md` for measurement and GPS
+alignment assumptions. Both launch modes use the same terrain.
+
+## Lake geofence
+
+The integrated PX4 launch automatically installs a 27-vertex inclusion fence
+around the main basin, at least 20 m inside the modeled shoreline. The narrow
+northern inlet is excluded. Crossing this boundary triggers **Hold**
+(`GF_ACTION=2`); ordinary forward joystick input does not cancel that Hold.
+Hold brakes and may turn the boat to regain its holding position. It is not
+an invisible collision wall: momentum, controller error or an explicit mode
+override can still carry the boat outside the fence.
+
+Restart PX4 and Gazebo with `make px4_sitl gz_fish_usv` to install it. In QGC's
+Plan view, download the plan from the vehicle and inspect its geofence before
+uploading a mission. Keep waypoints inside the polygon. Uploading a plan with
+a cleared or different fence can replace this protection for that session.
+In the PX4 console, `navigator status` reports the loaded fence; startup also
+prints `Gravenbol fence: 27 vertices` and `Geofence imported`. Download this
+new fence after restarting; do not upload QGC's cached, misaligned polygon.
+Review existing mission waypoints too: the corrected simulated lake has moved
+relative to its old local coordinates.
+
+Every fish_usv startup restores this boundary and sets `GF_ACTION=2` and
+`GF_PREDICT=0`, overriding saved values for these two parameters. The generated
+`gravenbol_geofence.txt` is local to the PX4 instance; the user's SD-card
+`etc/geofence.txt` is not changed. The fence follows the world's GPS origin,
+including a complete `PX4_HOME_LAT` / `PX4_HOME_LON` / `PX4_HOME_ALT` override.
+Only the supplied, unrotated Gravenbol worlds are supported; generation errors
+stop startup rather than silently running without the required fence.
+
+Gazebo alone has bank collisions but **no PX4 geofence enforcement**. This
+boundary follows the approximate simulated lake, not a surveyed real shoreline;
+do not transfer it to a real vessel as a navigation safety boundary.
+
+Earlier controller validation on an isolated PX4/Gazebo instance, using the
+previous 24-point layout: all vertices downloaded over
+the MAVLink fence protocol, an in-fence two-waypoint mission completed, and a
+full-forward boundary crossing triggered Hold. Continued forward stick input
+for 35 seconds did not override Hold; the motors settled to neutral and the
+boat stayed at least 28.4 m from the traced shore on that test path. This is a
+single calm-water scenario, not a guarantee for every approach or controller
+configuration.
+
+The corrected 27-point layout was also tested in isolated PX4/Gazebo: home
+matched the beach GPS coordinates, the boat faced west, preflight checks
+passed, all fence points downloaded over MAVLink, and a two-waypoint mission
+from the beach launch completed without a failsafe. Fourteen automated checks
+cover geometry, generated collision mesh, launch pose, geofence and map alignment.
+
+## Vessel control and dynamics
+
+The world provides calm freshwater with its surface at world Z=0 and a lakebed
+sloping to approximately Z=-5 m. It spawns the boat at Z=0.131 m. Hull mass, inertia, thrust and drag
 are initial estimates requiring calibration; waves and water optics are not modeled.
 Each hull uses eight adjoining collision boxes. Gazebo Harmonic 8.15 does not
 rotate the graded-buoyancy slicing plane for inclined boxes; subdividing the
@@ -94,9 +151,8 @@ gz gui -c Tools/simulation/gz/models/fish_usv/camera.config
 This opens a normal GUI window with the camera topic preselected. Avoid
 `gz gui -s ImageDisplay` on gz-gui 8.4: its topic notification can dereference
 a missing main window and crash. The configuration uses a main window instead.
-Keep the simulation unpaused. The current seabed has no texture or fish, so
-the downward-facing image can look like a nearly uniform sandy colour even
-when frames are arriving. For the standalone demo, choose the topic beginning
+Keep the simulation unpaused. The lakebed has synthetic sediment patches and
+scattered stones, but no fish. For the standalone demo, choose the topic beginning
 `/world/fish_usv_demo/model/fish_usv/` instead.
 
 Add fish geometry below the surface and connect an image subscriber/detection

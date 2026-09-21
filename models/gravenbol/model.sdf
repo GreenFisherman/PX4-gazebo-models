@@ -1,0 +1,4143 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <model name="gravenbol">
+    <static>true</static>
+    <link name="terrain">
+      <collision name="solid_banks_and_lakebed">
+        <geometry>
+          <mesh>
+            <uri>model://gravenbol/meshes/terrain.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="grass_sand_and_sediment">
+        <geometry>
+          <mesh>
+            <uri>model://gravenbol/meshes/terrain.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="water">
+      <pose>-280.713 74.692 0 0 0 0</pose>
+      <visual name="surface">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>816.000 556.000</size>
+          </plane>
+        </geometry>
+        <transparency>.48</transparency>
+        <cast_shadows>false</cast_shadows>
+        <material>
+          <ambient>.06 .25 .28 1</ambient>
+          <diffuse>.08 .32 .35 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="shoreline_trees">
+      <visual name="trunk_1_visual">
+        <pose>-127.131 185.166 4.193 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.807</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_1_collision">
+        <pose>-127.131 185.166 4.193 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.807</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_1">
+        <pose>-127.131 185.166 6.597 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_2_visual">
+        <pose>10.049 119.953 5.034 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.306</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_2_collision">
+        <pose>10.049 119.953 5.034 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.306</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_2">
+        <pose>10.049 119.953 8.187 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_3_visual">
+        <pose>-101.936 137.928 4.446 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.486</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_3_collision">
+        <pose>-101.936 137.928 4.446 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.486</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_3">
+        <pose>-101.936 137.928 7.189 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_4_visual">
+        <pose>-315.886 281.887 5.161 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.605</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_4_collision">
+        <pose>-315.886 281.887 5.161 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.605</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_4">
+        <pose>-315.886 281.887 8.463 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_5_visual">
+        <pose>-88.072 136.802 3.866 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.105</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_5_collision">
+        <pose>-88.072 136.802 3.866 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.105</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_5">
+        <pose>-88.072 136.802 5.919 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_6_visual">
+        <pose>-665.004 -17.047 5.066 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.289</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_6_collision">
+        <pose>-665.004 -17.047 5.066 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.289</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_6">
+        <pose>-665.004 -17.047 8.210 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_7_visual">
+        <pose>-84.014 126.828 5.272 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.968</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_7_collision">
+        <pose>-84.014 126.828 5.272 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.968</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_7">
+        <pose>-84.014 126.828 8.756 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_8_visual">
+        <pose>-344.173 259.302 4.464 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.188</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_8_collision">
+        <pose>-344.173 259.302 4.464 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.188</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_8">
+        <pose>-344.173 259.302 7.058 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_9_visual">
+        <pose>-337.861 -145.024 4.692 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.762</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_9_collision">
+        <pose>-337.861 -145.024 4.692 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.762</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_9">
+        <pose>-337.861 -145.024 7.572 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_10_visual">
+        <pose>-551.405 267.577 4.559 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.211</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_10_collision">
+        <pose>-551.405 267.577 4.559 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.211</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_10">
+        <pose>-551.405 267.577 7.165 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_11_visual">
+        <pose>-661.089 212.564 4.994 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.136</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_11_collision">
+        <pose>-661.089 212.564 4.994 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.136</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_11">
+        <pose>-661.089 212.564 8.061 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_12_visual">
+        <pose>-314.636 314.684 4.287 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.980</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_12_collision">
+        <pose>-314.636 314.684 4.287 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.980</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_12">
+        <pose>-314.636 314.684 6.777 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_13_visual">
+        <pose>-281.629 -134.661 3.894 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.294</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_13_collision">
+        <pose>-281.629 -134.661 3.894 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.294</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_13">
+        <pose>-281.629 -134.661 6.042 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_14_visual">
+        <pose>-645.871 15.589 4.266 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.611</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_14_collision">
+        <pose>-645.871 15.589 4.266 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.611</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_14">
+        <pose>-645.871 15.589 6.572 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_15_visual">
+        <pose>-308.652 296.472 4.098 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.622</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_15_collision">
+        <pose>-308.652 296.472 4.098 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.622</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_15">
+        <pose>-308.652 296.472 6.409 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_16_visual">
+        <pose>-117.822 149.886 4.841 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.416</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_16_collision">
+        <pose>-117.822 149.886 4.841 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.416</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_16">
+        <pose>-117.822 149.886 8.049 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_17_visual">
+        <pose>-503.438 -154.605 4.908 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.135</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_17_collision">
+        <pose>-503.438 -154.605 4.908 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.135</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_17">
+        <pose>-503.438 -154.605 7.975 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_18_visual">
+        <pose>-225.094 320.748 4.354 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.118</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_18_collision">
+        <pose>-225.094 320.748 4.354 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.118</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_18">
+        <pose>-225.094 320.748 6.913 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_19_visual">
+        <pose>-116.901 287.358 5.239 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.645</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_19_collision">
+        <pose>-116.901 287.358 5.239 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.645</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_19">
+        <pose>-116.901 287.358 8.561 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_20_visual">
+        <pose>-391.498 -165.218 4.753 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.259</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_20_collision">
+        <pose>-391.498 -165.218 4.753 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.259</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_20">
+        <pose>-391.498 -165.218 7.883 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_21_visual">
+        <pose>34.690 87.370 3.879 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.459</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_21_collision">
+        <pose>34.690 87.370 3.879 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.459</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_21">
+        <pose>34.690 87.370 6.109 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_22_visual">
+        <pose>-298.700 315.196 5.055 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.381</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_22_collision">
+        <pose>-298.700 315.196 5.055 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.381</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_22">
+        <pose>-298.700 315.196 8.246 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_23_visual">
+        <pose>-625.584 -106.475 4.964 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.412</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_23_collision">
+        <pose>-625.584 -106.475 4.964 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.412</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_23">
+        <pose>-625.584 -106.475 8.170 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_24_visual">
+        <pose>-652.070 75.029 4.873 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.314</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_24_collision">
+        <pose>-652.070 75.029 4.873 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.314</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_24">
+        <pose>-652.070 75.029 8.030 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_25_visual">
+        <pose>52.952 -9.458 3.794 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.129</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_25_collision">
+        <pose>52.952 -9.458 3.794 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.129</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_25">
+        <pose>52.952 -9.458 5.858 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_26_visual">
+        <pose>-58.299 -77.227 4.428 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.386</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_26_collision">
+        <pose>-58.299 -77.227 4.428 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.386</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_26">
+        <pose>-58.299 -77.227 7.121 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_27_visual">
+        <pose>-97.718 123.923 4.586 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.692</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_27_collision">
+        <pose>-97.718 123.923 4.586 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.692</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_27">
+        <pose>-97.718 123.923 7.432 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_28_visual">
+        <pose>-651.807 110.699 4.652 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.725</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_28_collision">
+        <pose>-651.807 110.699 4.652 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.725</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_28">
+        <pose>-651.807 110.699 7.515 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_29_visual">
+        <pose>-307.617 -158.748 4.435 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.173</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_29_collision">
+        <pose>-307.617 -158.748 4.435 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.173</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_29">
+        <pose>-307.617 -158.748 7.022 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_30_visual">
+        <pose>-632.990 -92.170 4.452 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.247</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_30_collision">
+        <pose>-632.990 -92.170 4.452 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.247</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_30">
+        <pose>-632.990 -92.170 7.075 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_31_visual">
+        <pose>-217.688 -146.229 5.163 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.453</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_31_collision">
+        <pose>-217.688 -146.229 5.163 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.453</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_31">
+        <pose>-217.688 -146.229 8.389 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_32_visual">
+        <pose>-325.142 285.057 3.977 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.709</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_32_collision">
+        <pose>-325.142 285.057 3.977 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.709</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_32">
+        <pose>-325.142 285.057 6.332 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_33_visual">
+        <pose>-130.818 -129.357 4.777 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.022</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_33_collision">
+        <pose>-130.818 -129.357 4.777 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.022</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_33">
+        <pose>-130.818 -129.357 7.788 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_34_visual">
+        <pose>-4.141 98.438 5.093 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.523</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_34_collision">
+        <pose>-4.141 98.438 5.093 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.523</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_34">
+        <pose>-4.141 98.438 8.355 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_35_visual">
+        <pose>-263.625 -145.085 4.676 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.718</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_35_collision">
+        <pose>-263.625 -145.085 4.676 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.718</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_35">
+        <pose>-263.625 -145.085 7.535 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_36_visual">
+        <pose>6.618 104.429 5.044 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.806</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_36_collision">
+        <pose>6.618 104.429 5.044 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.806</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_36">
+        <pose>6.618 104.429 8.447 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_37_visual">
+        <pose>59.143 0.212 4.601 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.821</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_37_collision">
+        <pose>59.143 0.212 4.601 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.821</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_37">
+        <pose>59.143 0.212 7.511 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_38_visual">
+        <pose>-504.227 -138.152 4.796 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.026</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_38_collision">
+        <pose>-504.227 -138.152 4.796 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.026</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_38">
+        <pose>-504.227 -138.152 7.809 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_39_visual">
+        <pose>37.624 69.686 4.881 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.304</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_39_collision">
+        <pose>37.624 69.686 4.881 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.304</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_39">
+        <pose>37.624 69.686 8.033 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_40_visual">
+        <pose>-58.633 144.160 5.123 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.496</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_40_collision">
+        <pose>-58.633 144.160 5.123 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.496</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_40">
+        <pose>-58.633 144.160 8.371 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_41_visual">
+        <pose>-494.328 256.758 5.271 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.874</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_41_collision">
+        <pose>-494.328 256.758 5.271 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.874</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_41">
+        <pose>-494.328 256.758 8.708 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_42_visual">
+        <pose>-190.167 -147.972 4.057 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.523</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_42_collision">
+        <pose>-190.167 -147.972 4.057 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.523</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_42">
+        <pose>-190.167 -147.972 6.319 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_43_visual">
+        <pose>-213.858 -135.784 4.113 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.956</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_43_collision">
+        <pose>-213.858 -135.784 4.113 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.956</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_43">
+        <pose>-213.858 -135.784 6.591 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_44_visual">
+        <pose>-644.674 -42.510 4.574 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.244</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_44_collision">
+        <pose>-644.674 -42.510 4.574 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.244</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_44">
+        <pose>-644.674 -42.510 7.196 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_45_visual">
+        <pose>-642.044 197.652 4.052 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.544</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_45_collision">
+        <pose>-642.044 197.652 4.052 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.544</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_45">
+        <pose>-642.044 197.652 6.324 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_46_visual">
+        <pose>-442.085 242.018 5.100 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.732</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_46_collision">
+        <pose>-442.085 242.018 5.100 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.732</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_46">
+        <pose>-442.085 242.018 8.466 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_47_visual">
+        <pose>-535.064 -143.328 4.035 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.552</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_47_collision">
+        <pose>-535.064 -143.328 4.035 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.552</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_47">
+        <pose>-535.064 -143.328 6.311 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_48_visual">
+        <pose>-142.983 -129.615 4.135 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.780</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_48_collision">
+        <pose>-142.983 -129.615 4.135 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.780</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_48">
+        <pose>-142.983 -129.615 6.525 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_49_visual">
+        <pose>-321.042 322.082 3.941 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.271</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_49_collision">
+        <pose>-321.042 322.082 3.941 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.271</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_49">
+        <pose>-321.042 322.082 6.077 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_50_visual">
+        <pose>-586.834 232.333 5.237 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.843</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_50_collision">
+        <pose>-586.834 232.333 5.237 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.843</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_50">
+        <pose>-586.834 232.333 8.658 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_51_visual">
+        <pose>-190.324 334.790 4.458 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.358</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_51_collision">
+        <pose>-190.324 334.790 4.458 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.358</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_51">
+        <pose>-190.324 334.790 7.136 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_52_visual">
+        <pose>-604.874 245.740 4.118 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.629</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_52_collision">
+        <pose>-604.874 245.740 4.118 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.629</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_52">
+        <pose>-604.874 245.740 6.433 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_53_visual">
+        <pose>-151.571 333.086 4.180 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.728</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_53_collision">
+        <pose>-151.571 333.086 4.180 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.728</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_53">
+        <pose>-151.571 333.086 6.544 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_54_visual">
+        <pose>-518.132 -129.494 3.996 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.700</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_54_collision">
+        <pose>-518.132 -129.494 3.996 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.700</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_54">
+        <pose>-518.132 -129.494 6.346 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_55_visual">
+        <pose>-331.646 -135.253 4.066 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.755</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_55_collision">
+        <pose>-331.646 -135.253 4.066 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.755</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_55">
+        <pose>-331.646 -135.253 6.444 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_56_visual">
+        <pose>53.397 32.360 4.860 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.852</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_56_collision">
+        <pose>53.397 32.360 4.860 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.852</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_56">
+        <pose>53.397 32.360 7.786 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_57_visual">
+        <pose>-419.981 234.912 4.607 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.787</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_57_collision">
+        <pose>-419.981 234.912 4.607 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.787</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_57">
+        <pose>-419.981 234.912 7.501 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_58_visual">
+        <pose>-420.411 -151.319 3.997 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.727</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_58_collision">
+        <pose>-420.411 -151.319 3.997 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.727</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_58">
+        <pose>-420.411 -151.319 6.360 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_59_visual">
+        <pose>67.176 62.085 4.340 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.152</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_59_collision">
+        <pose>67.176 62.085 4.340 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.152</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_59">
+        <pose>67.176 62.085 6.916 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_60_visual">
+        <pose>-512.939 259.776 4.811 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.097</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_60_collision">
+        <pose>-512.939 259.776 4.811 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.097</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_60">
+        <pose>-512.939 259.776 7.859 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_61_visual">
+        <pose>-515.590 -149.690 4.986 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.053</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_61_collision">
+        <pose>-515.590 -149.690 4.986 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.053</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_61">
+        <pose>-515.590 -149.690 8.012 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_62_visual">
+        <pose>-387.460 -140.031 4.740 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.758</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_62_collision">
+        <pose>-387.460 -140.031 4.740 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.758</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_62">
+        <pose>-387.460 -140.031 7.619 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_63_visual">
+        <pose>-354.077 252.967 4.098 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.936</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_63_collision">
+        <pose>-354.077 252.967 4.098 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.936</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_63">
+        <pose>-354.077 252.967 6.566 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_64_visual">
+        <pose>-413.737 -143.191 4.124 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.666</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_64_collision">
+        <pose>-413.737 -143.191 4.124 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.666</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_64">
+        <pose>-413.737 -143.191 6.457 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_65_visual">
+        <pose>-662.378 163.054 4.634 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.981</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_65_collision">
+        <pose>-662.378 163.054 4.634 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.981</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_65">
+        <pose>-662.378 163.054 7.625 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_66_visual">
+        <pose>-365.168 214.310 5.043 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.305</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_66_collision">
+        <pose>-365.168 214.310 5.043 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.305</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_66">
+        <pose>-365.168 214.310 8.196 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_67_visual">
+        <pose>-69.317 146.943 4.248 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.943</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_67_collision">
+        <pose>-69.317 146.943 4.248 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.943</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_67">
+        <pose>-69.317 146.943 6.720 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_68_visual">
+        <pose>-236.813 -150.226 4.708 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.162</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_68_collision">
+        <pose>-236.813 -150.226 4.708 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.162</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_68">
+        <pose>-236.813 -150.226 7.790 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_69_visual">
+        <pose>-21.813 130.090 5.116 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.725</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_69_collision">
+        <pose>-21.813 130.090 5.116 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.725</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_69">
+        <pose>-21.813 130.090 8.478 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_70_visual">
+        <pose>-87.365 -101.269 5.246 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.635</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_70_collision">
+        <pose>-87.365 -101.269 5.246 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.635</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_70">
+        <pose>-87.365 -101.269 8.563 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_71_visual">
+        <pose>-663.281 95.670 4.358 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.176</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_71_collision">
+        <pose>-663.281 95.670 4.358 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.176</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_71">
+        <pose>-663.281 95.670 6.946 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_72_visual">
+        <pose>-96.503 242.315 5.383 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.877</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_72_collision">
+        <pose>-96.503 242.315 5.383 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.877</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_72">
+        <pose>-96.503 242.315 8.821 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_73_visual">
+        <pose>-619.792 240.572 3.998 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.126</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_73_collision">
+        <pose>-619.792 240.572 3.998 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.126</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_73">
+        <pose>-619.792 240.572 6.062 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_74_visual">
+        <pose>-640.286 210.108 4.925 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.580</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_74_collision">
+        <pose>-640.286 210.108 4.925 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.580</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_74">
+        <pose>-640.286 210.108 8.215 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_75_visual">
+        <pose>49.618 15.425 3.896 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.200</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_75_collision">
+        <pose>49.618 15.425 3.896 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.200</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_75">
+        <pose>49.618 15.425 5.996 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_76_visual">
+        <pose>-615.344 -119.840 5.071 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.202</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_76_collision">
+        <pose>-615.344 -119.840 5.071 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.202</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_76">
+        <pose>-615.344 -119.840 8.172 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_77_visual">
+        <pose>-662.967 116.601 5.231 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.579</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_77_collision">
+        <pose>-662.967 116.601 5.231 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.579</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_77">
+        <pose>-662.967 116.601 8.520 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_78_visual">
+        <pose>47.694 67.706 4.714 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.839</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_78_collision">
+        <pose>47.694 67.706 4.714 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.839</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_78">
+        <pose>47.694 67.706 7.634 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_79_visual">
+        <pose>-276.223 -149.630 5.125 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.942</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_79_collision">
+        <pose>-276.223 -149.630 5.125 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.942</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_79">
+        <pose>-276.223 -149.630 8.596 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_80_visual">
+        <pose>-246.131 -151.907 4.292 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.855</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_80_collision">
+        <pose>-246.131 -151.907 4.292 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.855</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_80">
+        <pose>-246.131 -151.907 6.720 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_81_visual">
+        <pose>32.518 -55.150 3.765 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.106</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_81_collision">
+        <pose>32.518 -55.150 3.765 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.106</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_81">
+        <pose>32.518 -55.150 5.818 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_82_visual">
+        <pose>-127.577 256.473 4.840 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.167</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_82_collision">
+        <pose>-127.577 256.473 4.840 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.167</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_82">
+        <pose>-127.577 256.473 7.923 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_83_visual">
+        <pose>66.835 -13.187 4.895 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.921</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_83_collision">
+        <pose>66.835 -13.187 4.895 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.921</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_83">
+        <pose>66.835 -13.187 7.856 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_84_visual">
+        <pose>75.403 2.273 4.088 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.416</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_84_collision">
+        <pose>75.403 2.273 4.088 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.416</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_84">
+        <pose>75.403 2.273 6.295 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_85_visual">
+        <pose>-0.891 126.198 4.653 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.678</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_85_collision">
+        <pose>-0.891 126.198 4.653 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.678</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_85">
+        <pose>-0.891 126.198 7.492 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_86_visual">
+        <pose>-669.286 48.938 5.227 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.646</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_86_collision">
+        <pose>-669.286 48.938 5.227 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.646</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_86">
+        <pose>-669.286 48.938 8.550 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_87_visual">
+        <pose>-649.860 -8.193 3.825 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.101</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_87_collision">
+        <pose>-649.860 -8.193 3.825 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.101</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_87">
+        <pose>-649.860 -8.193 5.875 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_88_visual">
+        <pose>-656.130 186.051 3.834 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.001</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_88_collision">
+        <pose>-656.130 186.051 3.834 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.001</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_88">
+        <pose>-656.130 186.051 5.834 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_89_visual">
+        <pose>45.043 -17.314 3.854 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.243</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_89_collision">
+        <pose>45.043 -17.314 3.854 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.243</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_89">
+        <pose>45.043 -17.314 5.976 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_90_visual">
+        <pose>-666.785 79.809 5.281 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.891</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_90_collision">
+        <pose>-666.785 79.809 5.281 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.891</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_90">
+        <pose>-666.785 79.809 8.726 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_91_visual">
+        <pose>-205.793 336.004 4.462 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.328</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_91_collision">
+        <pose>-205.793 336.004 4.462 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.328</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_91">
+        <pose>-205.793 336.004 7.126 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_92_visual">
+        <pose>-656.927 59.094 5.342 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.785</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_92_collision">
+        <pose>-656.927 59.094 5.342 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.785</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_92">
+        <pose>-656.927 59.094 8.735 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_93_visual">
+        <pose>-595.928 -119.041 3.598 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.122</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_93_collision">
+        <pose>-595.928 -119.041 3.598 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.122</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_93">
+        <pose>-595.928 -119.041 5.659 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_94_visual">
+        <pose>-110.423 181.533 4.630 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.568</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_94_collision">
+        <pose>-110.423 181.533 4.630 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.568</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_94">
+        <pose>-110.423 181.533 7.414 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_95_visual">
+        <pose>-120.654 240.692 4.547 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.767</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_95_collision">
+        <pose>-120.654 240.692 4.547 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.767</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_95">
+        <pose>-120.654 240.692 7.430 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_96_visual">
+        <pose>-676.618 172.875 4.458 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.368</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_96_collision">
+        <pose>-676.618 172.875 4.458 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.368</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_96">
+        <pose>-676.618 172.875 7.142 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_97_visual">
+        <pose>-641.688 -114.657 4.188 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.766</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_97_collision">
+        <pose>-641.688 -114.657 4.188 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.766</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_97">
+        <pose>-641.688 -114.657 6.571 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_98_visual">
+        <pose>-672.120 90.929 4.678 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.047</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_98_collision">
+        <pose>-672.120 90.929 4.678 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.047</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_98">
+        <pose>-672.120 90.929 7.702 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_99_visual">
+        <pose>-626.670 -122.263 4.430 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.428</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_99_collision">
+        <pose>-626.670 -122.263 4.430 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.428</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_99">
+        <pose>-626.670 -122.263 7.144 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_100_visual">
+        <pose>-110.729 204.761 4.557 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.611</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_100_collision">
+        <pose>-110.729 204.761 4.557 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.611</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_100">
+        <pose>-110.729 204.761 7.363 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_101_visual">
+        <pose>-572.305 270.777 3.949 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.583</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_101_collision">
+        <pose>-572.305 270.777 3.949 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.583</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_101">
+        <pose>-572.305 270.777 6.241 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_102_visual">
+        <pose>-374.331 -158.263 4.718 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.763</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_102_collision">
+        <pose>-374.331 -158.263 4.718 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.763</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_102">
+        <pose>-374.331 -158.263 7.599 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_103_visual">
+        <pose>-54.572 -88.086 4.870 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.435</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_103_collision">
+        <pose>-54.572 -88.086 4.870 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.435</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_103">
+        <pose>-54.572 -88.086 8.087 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_104_visual">
+        <pose>-633.512 220.380 4.638 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.697</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_104_collision">
+        <pose>-633.512 220.380 4.638 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.697</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_104">
+        <pose>-633.512 220.380 7.486 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_105_visual">
+        <pose>-106.549 231.149 4.192 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.837</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_105_collision">
+        <pose>-106.549 231.149 4.192 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.837</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_105">
+        <pose>-106.549 231.149 6.611 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_106_visual">
+        <pose>-131.271 314.363 5.176 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.851</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_106_collision">
+        <pose>-131.271 314.363 5.176 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.851</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_106">
+        <pose>-131.271 314.363 8.601 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_107_visual">
+        <pose>-114.775 332.372 3.870 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.098</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_107_collision">
+        <pose>-114.775 332.372 3.870 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.098</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_107">
+        <pose>-114.775 332.372 5.919 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_108_visual">
+        <pose>-513.833 271.038 4.343 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.751</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_108_collision">
+        <pose>-513.833 271.038 4.343 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>4.751</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_108">
+        <pose>-513.833 271.038 6.719 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_109_visual">
+        <pose>-556.006 256.735 4.956 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.076</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_109_collision">
+        <pose>-556.006 256.735 4.956 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>6.076</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_109">
+        <pose>-556.006 256.735 7.994 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+      <visual name="trunk_110_visual">
+        <pose>-22.962 -89.346 4.406 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.283</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>.24 .17 .10 1</ambient>
+          <diffuse>.24 .17 .10 1</diffuse>
+        </material>
+      </visual>
+      <collision name="trunk_110_collision">
+        <pose>-22.962 -89.346 4.406 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.23</radius>
+            <length>5.283</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="crown_110">
+        <pose>-22.962 -89.346 7.047 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>2.7 2.7 3.3</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.12 .27 .09 1</ambient>
+          <diffuse>.12 .27 .09 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="underwater_stones">
+      <visual name="stone_1">
+        <pose>-30.419 23.374 -4.965 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.41885954903714184 0.3350876392297135 0.20942977451857092</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_2">
+        <pose>-21.309 -8.191 -5.026 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.2663757359370731 0.21310058874965848 0.13318786796853654</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_3">
+        <pose>-29.444 10.327 -5.081 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.19538133657183412 0.15630506925746732 0.09769066828591706</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_4">
+        <pose>-60.651 29.414 -4.829 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.45039907646551125 0.36031926117240903 0.22519953823275562</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_5">
+        <pose>-27.050 19.245 -5.074 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.1687764705223024 0.13502117641784192 0.0843882352611512</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_9">
+        <pose>-55.403 40.181 -5.083 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.31766016690870913 0.25412813352696734 0.15883008345435456</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_10">
+        <pose>-32.433 6.476 -4.963 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.4844448789458722 0.38755590315669775 0.2422224394729361</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_11">
+        <pose>-28.298 61.526 -4.882 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.49404035977000493 0.39523228781600395 0.24702017988500247</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_12">
+        <pose>-63.950 -36.152 -4.977 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.19389145459937243 0.15511316367949796 0.09694572729968622</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_13">
+        <pose>-24.327 24.780 -4.937 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.406786013315243 0.3254288106521944 0.2033930066576215</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_15">
+        <pose>-54.461 11.992 -4.866 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.22190252274880073 0.1775220181990406 0.11095126137440037</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_17">
+        <pose>13.250 35.169 -4.932 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.393201720918542 0.31456137673483364 0.196600860459271</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_21">
+        <pose>-38.797 -8.986 -4.948 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.3371064915529576 0.26968519324236606 0.1685532457764788</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_22">
+        <pose>-28.472 39.167 -5.028 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.2824443120402307 0.22595544963218456 0.14122215602011534</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_23">
+        <pose>-39.059 -4.121 -5.086 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.15012254441886158 0.12009803553508927 0.07506127220943079</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_25">
+        <pose>-50.317 16.469 -4.833 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.2644574147624641 0.2115659318099713 0.13222870738123205</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_26">
+        <pose>-45.789 -21.959 -4.983 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.25735112752325146 0.20588090201860118 0.12867556376162573</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_30">
+        <pose>7.934 -14.610 -4.613 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.454906521136475 0.36392521690918 0.2274532605682375</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_33">
+        <pose>-31.170 65.522 -4.939 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.41249591690867793 0.32999673352694237 0.20624795845433896</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_37">
+        <pose>-51.355 -26.210 -5.082 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.4714939072616684 0.37719512580933473 0.2357469536308342</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_38">
+        <pose>-16.067 47.866 -5.015 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.4558829142334514 0.3647063313867611 0.2279414571167257</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_40">
+        <pose>-64.160 61.570 -4.907 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.2852827135037815 0.2282261708030252 0.14264135675189074</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_41">
+        <pose>-14.537 41.433 -5.039 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.46730230254316196 0.3738418420345296 0.23365115127158098</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_45">
+        <pose>-13.968 45.794 -4.990 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.41587916588484286 0.33270333270787433 0.20793958294242143</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_49">
+        <pose>-64.041 65.798 -4.975 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.3929569091305995 0.31436552730447964 0.19647845456529975</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_50">
+        <pose>-17.529 51.011 -5.000 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.2452287007797319 0.19618296062378554 0.12261435038986596</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_54">
+        <pose>-11.280 67.268 -5.001 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.4718139043252527 0.3774511234602022 0.23590695216262636</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_56">
+        <pose>-60.746 38.994 -5.056 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.42898290421299123 0.343186323370393 0.21449145210649562</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_59">
+        <pose>-48.636 -0.659 -5.157 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.22713726415219543 0.18170981132175634 0.11356863207609771</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="stone_63">
+        <pose>-11.840 -16.814 -4.966 0 0 0</pose>
+        <geometry>
+          <ellipsoid>
+            <radii>0.43582300854473466 0.34865840683578775 0.21791150427236733</radii>
+          </ellipsoid>
+        </geometry>
+        <material>
+          <ambient>.32 .30 .25 1</ambient>
+          <diffuse>.32 .30 .25 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
