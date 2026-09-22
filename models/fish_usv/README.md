@@ -1,9 +1,9 @@
 # Fish USV
 
 Gazebo Harmonic prototype for camera-based fish detection: a 1.2 m twin-hull
-surface vessel with two independent thrusters, hydrodynamic damping, an underwater
-RGB camera, and IMU, magnetometer, pressure and GNSS sensors. Geometry uses
-primitives, so no mesh downloads are needed.
+surface vessel with two independent thrusters, hydrodynamic damping, underwater
+and forward RGB cameras, and IMU, magnetometer, pressure and GNSS sensors.
+Geometry uses primitives, so no mesh downloads are needed.
 
 Run the integrated PX4 simulation from the PX4 repository root:
 
@@ -89,32 +89,46 @@ A manual-input-loss regression also stopped a MAVLink joystick stream before
 starting the mission: both waypoints completed and post-mission Hold remained
 active without a failsafe while manual input was unavailable.
 
-The camera looks straight down from between the hulls, below the waterline.
+The original camera looks straight down from between the hulls, below the
+waterline.
 It produces RGB images at 1280 x 720, 20 Hz, with an 80-degree horizontal field
-of view and a 20 m far clipping distance. In the PX4 simulation, the image topic is:
+of view and a 20 m far clipping distance. The second camera looks forward from
+above the deck with the same image size, rate, and field of view. Its far clipping
+distance is 100 m. In the PX4 simulation, the independent image topics are:
 
 ```text
 /world/fish_usv/model/fish_usv_0/link/base_link/sensor/fish_camera/image
+/world/fish_usv/model/fish_usv_0/link/base_link/sensor/forward_camera/image
 ```
 
-Use `gz topic -l` to discover topics if you rename the world or model.
-To view the feed while the integrated simulation is running, open a second
+To reposition or aim the forward camera, edit the `forward_camera` sensor's
+`<pose>` in `model.sdf`: its six values are `x y z roll pitch yaw` relative to
+`base_link`, in metres and radians. The default `0.30 0 0.35 0 0 0` points
+along the boat's forward (+X) axis. The nearby `forward_camera_housing` visual
+has its own pose; adjust that too if you want the housing to follow the sensor.
+Restart the simulation after changing the model.
+
+Use `gz topic -l` to discover topics if you rename the world or model. To
+verify both streams, run `gz topic -e -t <image-topic>` for each path above while
+the simulation is unpaused; each should produce image messages independently.
+To view both feeds while the integrated simulation is running, open a second
 terminal in the PX4 repository root and run:
 
 ```bash
 gz gui -c Tools/simulation/gz/models/fish_usv/camera.config
 ```
 
-This opens a normal GUI window with the camera topic preselected. Avoid
+This opens a normal GUI window with both camera topics preselected. Avoid
 `gz gui -s ImageDisplay` on gz-gui 8.4: its topic notification can dereference
 a missing main window and crash. The configuration uses a main window instead.
 Keep the simulation unpaused. The lakebed has synthetic sediment patches and
-scattered stones, but no fish. For the standalone demo, choose the topic beginning
+scattered stones, but no fish. For the standalone demo, choose the topics beginning
 `/world/fish_usv_demo/model/fish_usv/` instead.
 
 Add fish geometry below the surface and connect an image subscriber/detection
-pipeline to this topic. The model does not include fish, a trained detector,
-sonar, underwater attenuation, or detection ground-truth labels.
+pipeline to the underwater camera topic. The model does not include fish, a
+trained detector, sonar, underwater attenuation, or detection ground-truth
+labels.
 
 To run Gazebo without PX4, use the standalone demo:
 

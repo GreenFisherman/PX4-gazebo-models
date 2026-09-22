@@ -134,6 +134,23 @@
           <clip><near>0.03</near><far>20</far></clip>
         </camera>
       </sensor>
+      <!-- Forward camera: edit this pose (x y z roll pitch yaw) to move or
+           aim it relative to base_link. Its optical axis is local +X. -->
+      <visual name="forward_camera_housing">
+        <pose>0.25 0 0.35 0 0 0</pose>
+        <geometry><box><size>0.08 0.08 0.06</size></box></geometry>
+        <material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.08 0.08 0.08 1</diffuse></material>
+      </visual>
+      <sensor name="forward_camera" type="camera">
+        <pose>0.30 0 0.35 0 0 0</pose>
+        <always_on>true</always_on>
+        <update_rate>20</update_rate>
+        <camera>
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image><width>1280</width><height>720</height><format>R8G8B8</format></image>
+          <clip><near>0.03</near><far>100</far></clip>
+        </camera>
+      </sensor>
       <!--Sensors-->
       <sensor name="air_pressure_sensor" type="air_pressure">
         <gz_frame_id>base_link</gz_frame_id>
